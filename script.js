@@ -1,4 +1,3 @@
-
 const canvas = document.getElementById('game-canvas');
 const ctx = canvas.getContext('2d');
 
@@ -152,7 +151,7 @@ function drawGameInfo() {
     ctx.fillStyle = 'black';
     ctx.font = '12px Arial';
     const currentTime = Math.floor((Date.now() - startTime) / 1000);
-    ctx.fillText(`시간: ${currentTime}초 | 점수: ${score} | 최고점수: ${highScore} | 속도: ${gameSpeed.toFixed(2)}`, 10, 20);
+    ctx.fillText(`Time: ${currentTime}s | Score: ${score} | High Score: ${highScore} | Speed: ${gameSpeed.toFixed(2)}`, 10, 20);
 }
 
 function gameLoop() {
@@ -183,7 +182,7 @@ function gameLoop() {
                 if (score > highScore) {
                     highScore = score;
                 }
-                alert(`게임 오버! 점수: ${score}`);
+                alert(`Game Over! Score: ${score}`);
                 score = 0;
                 gameSpeed = 5;
                 obstacles = [];
